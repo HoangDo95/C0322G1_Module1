@@ -1,0 +1,6 @@
+BEGIN
+  INPUT a nhập số tiền đô la Mỹ
+	b số tiền Việt Nam đồng
+  b = a*23000
+  DISPLAY
+END

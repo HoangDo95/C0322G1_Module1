@@ -1,0 +1,5 @@
+BEGIN 
+   INPUT a điểm toán,b điểm lý,c điểm hóa
+   Average = (a+b+c)/3
+   DISPLAY Average
+END

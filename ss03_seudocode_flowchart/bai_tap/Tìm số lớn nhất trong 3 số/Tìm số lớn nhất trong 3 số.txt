@@ -1,0 +1,12 @@
+BEGIN
+   INPUT a,b,c là 3 biến
+         a max
+   IF ( a>b AND a>c)
+	DISPLAY "a lớn nhất"
+   ELSE IF (b>c)
+	DISPLAY "b lớn nhất"
+	ELSE (b<c)
+	DISPLAY "c lớn nhất"
+	END IF
+   END IF
+END

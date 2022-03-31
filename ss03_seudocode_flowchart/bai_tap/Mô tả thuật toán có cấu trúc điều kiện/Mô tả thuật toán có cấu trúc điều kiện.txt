@@ -1,0 +1,17 @@
+BEGIN
+   INPUT a thang điểm sinh viên thang điểm 100
+   IF (a => 75)
+	DISPLAY "Loại A"
+   ELSE IF (60 <= a < 75)
+	DISPLAY "Loại B"
+	ELSE IF (45 <= a <60)
+	   DISPLAY "Loại C"
+	   ELSE IF (35 <= a < 45)
+		DISPLAY "Loại D"
+		ELSE ( a < 35)
+		   DISPLAY "Loại E"
+		END IF
+	   END IF
+	END IF
+   END IF
+END
