@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Amount</th>
+        <th >From Currency</th>
+        <th >To Currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text"id="dauvao">
+        </td>
+        <td>
+            <select id="chon1">
+                <option value="a">VietNam</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="chon2">
+                <option value="a">Vietnam</option>
+                <option value="b">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="ketqua()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td style="color: blue">result :</td>
+        <td id="kq" style="color: blue"></td>
+    </tr>
+</table>
+<script>
+    function ketqua() {
+        let giatrivao = document.getElementById('dauvao').value;
+        let chon1= document.getElementById('chon1').value;
+        let chon2= document.getElementById('chon2').value;
+        if (chon1 == 'a' && chon2 == 'b'){
+            let result = giatrivao / 23000;
+            document.getElementById('kq').innerText = result;
+        }
+        else if (chon1 =='b' && chon2 =='a'){
+            let result = giatrivao * 23000;
+            document.getElementById('kq').innerText = result;
+        } else {
+            let result = giatrivao;
+            document.getElementById('kq').innerText = result;
+        }
+    }
+</script>
+</body>
+</html>

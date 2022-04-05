@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caculator</h3>
+<input id="nhap1" type="number">
+<input id="nhap2" type="number">
+<br>
+<br>
+<button onclick="cong()">Addition(+)</button>
+<button onclick="tru()">Subtraction(-)</button>
+<button onclick="nhan()">Multiplication(X)</button>
+<button onclick="chia()">Division(/)</button>
+<p >Result Division: <span id="kq"></span></p></p>
+</body>
+<script>
+    function cong() {
+        let num1 = parseFloat(document.getElementById("nhap1").value);
+        let num2 = parseFloat(document.getElementById("nhap2").value);
+        document.getElementById("kq").innerHTML = num1 + num2;
+    }
+    function tru() {
+        let num1 = parseFloat(document.getElementById("nhap1").value);
+        let num2 = parseFloat(document.getElementById("nhap2").value);
+        document.getElementById("kq").innerHTML = num1 - num2;
+    }
+    function nhan() {
+        let num1 = parseFloat(document.getElementById("nhap1").value);
+        let num2 = parseFloat(document.getElementById("nhap2").value);
+        document.getElementById("kq").innerHTML = num1 * num2;
+    }
+    function chia() {
+        let num1 = parseFloat(document.getElementById("nhap1").value);
+        let num2 = parseFloat(document.getElementById("nhap2").value);
+        document.getElementById("kq").innerHTML = num1 / num2;
+    }
+</script>
+</html>
