@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+
 </head>
 <body>
-$END$
+<button onclick="">
+    OFF
+</button>
+<img src="pic_bulboff.gif" id="imgLight">
+<button onclick="turnOn()">
+    ON
+</button>
+
+<script>
+    function turnOn() {
+        document.getElementById('imgLight').src='pic_bulbon.gif';
+    }
+
 </body>
 </html>

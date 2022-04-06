@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Xây dựng chương trình
+tính tổng 2 số mà người dùng nhập vào.-->
+<p id="txtResult"></p>
+
+<script>
+    /*
+    * parseInt chuyển chuỗi qua số nguyên
+    * parseFloat chuyển chuỗi qua số thực
+    * */
+    let a = parseInt(prompt("nhập vào số a: "));
+    let b = parseInt(prompt("nhập vào số b: "));
+    let sum = a + b;
+    // alert(sum);
+    document.getElementById("txtResult").innerText
+        // = "kết quả " + a + " + " + b + " = " + sum;
+        = "kết quả " + a + " + " + b + " = " + sum;
+    //Nối chuỗi bằng toán tử cộng ( + ).
+
+</script>
 </body>
 </html>

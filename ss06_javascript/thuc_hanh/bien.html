@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p id="dmt"></p>
+<span id="trb"></span>
+
+<script>
+    let a = parseFloat(prompt("diemly"));
+    let b = parseFloat(prompt("diemhoa"));
+    let c = parseFloat(prompt("diemsinh"));
+    let sum = a+b+c;
+    document.getElementById("dmt").innerText= "điểm tổng" + "=" + sum
+    let area = (a+b+c)/3
+    document.getElementById("trb").innerText= "điểm trung bình" + "="+ area
+</script>
 </body>
 </html>
