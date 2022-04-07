@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("số 1"));
+    let b = parseInt(prompt("số 2"));
+    let c = parseInt(prompt("số 3"));
+    let d = (b*b -(4*a*c));
+    let e = Math.sqrt(d)
+    if (d<0){
+        alert("pt vô nghiệm")
+    }else if (d===0){
+        alert("x1=x2="+-b/2*a)
+    }else {
+        alert("x1="+(-b+e)/(2*a)+"và x2="+(-b-e)/(2*a))
+    }
+</script>
+</body>
+</html>
