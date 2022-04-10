@@ -6,12 +6,13 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("số 1"));
-    let b = parseInt(prompt("số 2"));
-    let c = parseInt(prompt("số 3"));
-    let d = (b*b -(4*a*c));
-    let e = Math.sqrt(d);
-    alert(e)
+    let a = parseInt(prompt("cạnh ngắn"));
+    let b = parseInt(prompt("cạnh dài"));
+    if (a>0 && b>0){
+        alert("S= "+a*b)
+    }else {
+        alert("nhập lại")
+    }
 </script>
 </body>
 </html>

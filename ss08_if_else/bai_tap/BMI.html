@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
-    let weight = parseInt(prompt("cân nặng"))
-    let height = parseInt(prompt("chiều cao"))
-    let bmi = weight / ( height ^ 2 )
+    let weight = parseInt(prompt("cân nặng"));
+    let height = parseInt(prompt("chiều cao"));
+    let c = Math.pow(height,2);
+    let bmi = weight / c;
     if (bmi > 30) {
         document.write('Obese')
     }else if(bmi > 25){
