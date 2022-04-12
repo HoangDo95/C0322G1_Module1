@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lai ngan hang</title>
+</head>
+<body>
+<script>
+    let money = parseFloat(prompt("số tiền gửi"));
+    let month = parseFloat(prompt("số tháng gửi"));
+    let interest = 0.3;
+    let total;
+    for (let i = 1; i <= month; i++) {
+        total = money * interest / month;
+    }
+    document.write("sô tháng vay :"+month+"<br>lãi hàng tháng :"+total)
+
+</script>
+
+</body>
+</html>
