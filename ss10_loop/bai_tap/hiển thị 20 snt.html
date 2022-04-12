@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num =4;
+    let count =0;
+    document.write(2+"<br>"+3+"<br>")
+    while (count<18){
+        let flag = true;
+        for(let i=2;i<num;i++){
+            if(num%i===0){
+                flag=false;
+                break;
+            }
+        }if (flag===true){
+            document.write(num+"<br>");
+            count++;
+            }
+        num++
+    }
+</script>
+</body>
+</html>
