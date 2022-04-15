@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <label for="search"></label><input type="text" id="search" placeholder="Enter word">
+    <input type="button" value="Search" onclick="clickMe()">
+</form>
+</body>
+<script>
+    function clickMe() {
+        let english = ["one", "bye", "name", "ten","class"];
+        let vietnam = ["một", "tạm biệt", "tên", "mười","lớp"];
+        let searchWord = document.getElementById('search').value;
+        let index = -1;
+        for (let i = 0; i < english.length; i++) {
+            if (searchWord === english[i]) {
+                index = i;
+                document.write("Từ: " + english[i] + "<br>" + "Nghĩa là: " + vietnam[index]);
+            }
+        }
+        if (index === -1) {
+            document.write("Không tìm thấy từ cần tra.")
+        }
+    }
+</script>
+</html>
