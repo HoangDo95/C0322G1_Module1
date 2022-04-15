@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = []
+    for (let i = 0; i < 5; i++) {
+        a[i] = parseInt(prompt("number"))
+    }
+    document.write(a)
+    let first = 0;
+    let last = a.length - 1;
+    while (first < last) {
+        let b = a[first];
+        a[first] = a[last];
+        a[last] = b;
+        first++;
+        last--;
+    }
+    document.write("<br>" + a)
+</script>
+</body>
+</html>

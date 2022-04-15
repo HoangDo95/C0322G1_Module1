@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    for (let i = 0; i < 10; i++) {
+        a[i] = parseInt(prompt('number'))
+    }
+    document.write(a)
+    let v = parseInt(prompt('number v'));
+    let flag = true;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === v) {
+            document.write('V is in the array');
+            flag = false;
+            break
+        }
+    }
+    if (flag === true) {
+        document.write('V is not in the Array')
+    }
+
+
+</script>
+</body>
+</html>

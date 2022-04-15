@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let i;
+    for (i = 0; i < 5; i++) {
+        a[i] = parseInt(prompt('number'))
+    }
+    // document.write(a)
+    let v = parseInt(prompt('number v'));
+    let flag = true
+    for (i = 0; i < a.length; i++) {
+        if (a[i] === v) {
+            flag = true;
+            break;
+        }
+    }
+    for (i; i < 5; i++) {
+        a[i] = a[i + 1];
+    }
+    if (flag === true){
+        a[9] = 0;}
+    document.write(a.join(''))
+
+
+
+</script>
+</body>
+</html>

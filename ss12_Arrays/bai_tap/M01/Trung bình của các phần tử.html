@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [1, 13, 5, 12, 19, 11, 3, 5, 10, 9];
+    let max = numbers[0];
+    let index = 0;
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+            index = i;
+        }
+        sum += numbers[i];
+    }
+    document.write("số lớn nhất: " + max + " vị trí " + index + '<br>');
+    document.write(sum/(numbers.length))
+</script>
+</body>
+</html>

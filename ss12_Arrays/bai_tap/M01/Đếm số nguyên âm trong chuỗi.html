@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    for(let i= 0;i<5;i++){
+        a[i]=parseInt(prompt('number'))
+    }document.write(a)
+    let count = 0
+    for(let i=0; i<a.length; i++){
+        if(a[i]<0){
+            count++
+        }
+    }document.write("<br>"+"Chuỗi có "+ count+" số âm")
+</script>
+</body>
+</html>
