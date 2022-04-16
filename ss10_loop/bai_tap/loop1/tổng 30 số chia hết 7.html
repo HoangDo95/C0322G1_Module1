@@ -6,14 +6,18 @@
 </head>
 <body>
 <script>
-    let i =7;
-    let sum =7 ;
-    let sout = 1;
-    for (let j=1;j<=30;j++){
-        sout=  i*j
-        sum = sum+ sout
-        document.write(sout+"<br>")
-    }document.write("Tổng = "+sum)
+    let n = 0;
+    let i = 7;
+    let s = 0;
+    while (n < 30) {
+        if (i % 7 === 0) {
+            n++;
+            s = s + i;
+            document.write(" " + i + "<br>")
+        }
+        i++;
+    }
+    document.write("Total =" + s)
 </script>
 </body>
 </html>

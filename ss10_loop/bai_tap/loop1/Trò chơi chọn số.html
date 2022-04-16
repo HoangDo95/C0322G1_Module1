@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+</head>
+<body>
+<h3>Game Đoán Số</h3>
+<input type="button" value="Start" onclick="abc()">
+<script>
+    function abc(){
+        let b = Math.floor(Math.random() * 10);
+        let i=0;
+        do{
+            let a =prompt("nhap 1 so bat ki ");
+            if (a<b) {
+                alert('số bạn đoán bé hơn');
+            }
+            else if(a>b) {
+                alert('số bạn đoán lớn hơn');
+            }
+            else {
+                alert('chúc mừng số bạn đoán đúng');
+                break;
+            }
+            i++;
+        }
+        while (i<3);
+        if(i===3) {
+            alert('Bạn đã nhập sai quá 3 lần');
+        }
+    }
+</script>
+</body>
+</html>
