@@ -6,12 +6,17 @@
 </head>
 <body>
 <script>
-    let a=[Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe, Regulus];
-    let b=[UrsaMinor, Tarurus, Cygnus, Lyra, Aquila, UrsaMajor , Leo];
-    let c=prompt("")
-    function f() {
-
+    function seach(star,constellation,str) {
+        for (let i = 0; i < star.length; i++) {
+            if (str === star[i]) {
+                return constellation[i]
+            }
+        }return "Nhập tên sao"
     }
+    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let constellation = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor' , 'Leo'];
+    let str = prompt("Nhập sao")
+    document.write(seach(star,constellation,str))
 </script>
 </body>
 </html>

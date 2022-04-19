@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function arr(a,b) {
+    let count =0
+    for(let i=0;i<a.length;i++){
+        if(b===a[i]){
+            count++
+        }
+    }if(count>0){
+        return count
+    }else {
+        return "-1"
+    }
+} let a1 = ['a','v','b','v','c'];
+let b1 = prompt("Nhập kí tự");
+let kq =arr(a1,b1);
+if(kq){
+    document.write(kq)
+}else{
+    document.write(kq)
+}
+</script>
+</body>
+</html>

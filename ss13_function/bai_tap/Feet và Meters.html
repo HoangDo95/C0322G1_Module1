@@ -6,12 +6,18 @@
 </head>
 <body>
 <script>
-    function footToMeter(foot) {
-        foot=3.279*meter
+    function footToMeter(meter) {
+        let foot = 3.279* meter
+        return (foot)
     }
-    function meterToFoot(meter) {
-        meter=0.305*foot
-    }
+    let a = parseInt(prompt("Nhập m"))
+    document.write(a + "m = "+footToMeter(a)+"f"+"<br>")
+
+    function meterToFoot(foot) {
+        let  meter = 0.305 * foot
+        return (meter)
+    }let b= parseInt(prompt("Nhập f"))
+    document.write(b+ "f = "+meterToFoot(b)+"m")
 
 </script>
 </body>

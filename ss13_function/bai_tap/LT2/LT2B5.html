@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function integerSmall() {
+        let numbers = [];
+        for (let i = 0; i < 5; i++) {
+            numbers[i] = parseInt(prompt("Nhập số"));
+            minInNumbers = Math.min.apply(Math, numbers);
+        }
+        return minInNumbers
+    }
+    document.write("Giá trị nhỏ nhất là " + integerSmall());
+</script>
+</body>
+</html>
