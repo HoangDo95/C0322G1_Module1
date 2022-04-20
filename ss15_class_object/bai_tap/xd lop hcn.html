@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length, withd) {
+            this.length = length;
+            this.withd = withd;
+        }
+
+        perimeter() {
+            return (this.length + this.withd) * 2;
+        }
+
+        area() {
+            return this.length * this.withd;
+        }
+    }
+
+    let rectangle = new Rectangle(2, 2);
+    document.write("Chu vi " + rectangle.perimeter() + "<br>")
+    document.write("Diện tích " + rectangle.area())
+</script>
+</body>
+</html>
