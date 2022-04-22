@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class BongDen{
+        constructor() {
+            this._status = false
+        }
+        turnOn(){
+            this._status = true;
+            alert("đèn sáng");
+        }
+        turnOff(){
+            this._status = false;
+            alert("đèn tắt");
+        }
+    }
+
+    class CongTac {
+        constructor() {
+            this._status = false;
+        }
+        ketNoiBongDen(bongDen){
+            this._bongDen = bongDen;
+        }
+        getStatus() {
+            return this._status;
+        }
+
+        setStatus(value) {
+            this._status = value;
+        }
+
+        batCongTac(){
+            this._status = true;
+            this._bongDen.turnOn();
+        }
+        tatCongTac(){
+            this._status = false;
+            this._bongDen.turnOff();
+        }
+    }
+
+    let bongDen = new BongDen();
+    let congTac = new CongTac();
+    congTac.ketNoiBongDen(bongDen);
+    congTac.batCongTac();
+    congTac.tatCongTac();
+
+
+</script>
+</body>
+</html>
