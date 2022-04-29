@@ -6,14 +6,18 @@
 </head>
 <body>
 <script>
-    let num = prompt("Enter your number: ");
-    let total = 1;
-    while( num != -1 ) {
-        num = prompt("Enter a number: ");
-        alert(num);
-        total +=num;
+    let n = 0;
+    let i = 7;
+    let s = 0;
+    while (n < 30) {
+        if (i % 7 === 0) {
+            n++;
+            s = s + i;
+            document.write(" " + i + "<br>")
+        }
+        i++;
     }
-    alert(total)
+    document.write("Total =" + s)
 </script>
 </body>
 </html>

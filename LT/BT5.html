@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết chương trình hiển thị các số nhỏ hơn 10000 và các số đó thỏa mãn 2 yêu cầu: -->
+<!--    thứ nhất số đó thuộc dãy fibonacci , thứ 2 số đó phải là số nguyên tố.-->
+</head>
+<body>
+<script>
+    let number = 10000;
+    let n1 = 0;
+    let n2 = 1;
+    let nextTerm = 0;
+    let flag = true
+    while (nextTerm <= number) {
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+        flag = true
+        if (nextTerm <= 1) {
+            flag = false;
+        } else {
+            for (let i = 3; i < nextTerm; i++) {
+                if (nextTerm % i === 0) {
+                    flag = false
+                }
+            }
+        }
+        if (flag === true) {
+            document.write(nextTerm + "<br>")
+        }
+    }
+
+
+</script>
+</body>
+</html>

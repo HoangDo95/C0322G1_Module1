@@ -20,10 +20,11 @@
             if (searchWord === english[i]) {
                 index = i;
                 document.write("Từ: " + english[i] + "<br>" + "Nghĩa là: " + vietnam[index]);
-            }
+            }if (index === -1) {
+                document.write("Không tìm thấy từ cần tra.")
+                break
         }
-        if (index === -1) {
-            document.write("Không tìm thấy từ cần tra.")
+
         }
     }
 </script>

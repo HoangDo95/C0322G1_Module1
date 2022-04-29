@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input ='abcdca';
+    let input1='cbdacd';
+    let count=0;
+    for(let i=0;i<input.length;i++){
+        for(let j=0;j<input1.length;j++){
+            if(input1[j]===input[i]){
+                document.write(input[i]);
+                input1=input1.replace(input1[j],"");
+                count++
+            }
+        }
+    }document.write(count)
+</script>
+</body>
+</html>

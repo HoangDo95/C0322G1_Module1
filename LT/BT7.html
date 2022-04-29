@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết chương trình cho người dùng nhập vào :-->
+<!--    •	1 mảng số nguyên ( độ dài của mảng do người dùng lựa chọn ) và 1 số nguyên number bất kì.-->
+<!--    •	Nếu number là số lẻ, thì tất cả số chẵn trong mảng sẽ tăng lên 1 đơn vị.-->
+<!--    Ngược lại nếu number là số chẵn thì tất cả số lẻ trong mảng tăng lên 1 đơn vị.-->
+<!--    Yêu cầu hiển thị ra màn hình: Mảng số nguyên trước khi thay đổi, số người dùng nhập vào và mảng sau khi thay đổi.-->
+
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhập số mảng"));
+    let arr = [];
+    for (let i = 0; i < a; i++) {
+        arr[i] = parseInt(prompt("nhập số"))
+    }
+    let b = parseInt(prompt("Chẳng or lẻ"));
+    document.write("Số trước lúc chuyển " + arr + "<br>")
+    if (b % 2 === 0) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] % 2 !== 0) {
+                arr[j]++
+            }
+        }
+    } else {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] % 2 === 0) {
+                arr[j]++
+            }
+        }
+    }
+    document.write("Số sau lúc chuyển " + arr)
+
+
+</script>
+</body>
+</html>

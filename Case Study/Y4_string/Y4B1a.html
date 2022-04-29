@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành xâu sao cho trong xâu
+    // không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. Ví dụ tRuong TaN HAI
+    //         =&gt; Truong Tan Hai.
+    // Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập
+    // xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+    let stringX = prompt('Nhập họ và tên: ');
+    document.write('Xâu kí tự trước khi chuẩn hoá: ' + stringX + '<br>');
+
+    function normalize(stringTxt) {
+        let noSpace = stringTxt.trim();
+        let lower = noSpace.toLowerCase();
+        let arrTxt = [];
+        arrTxt.push(lower[0].toUpperCase());
+        for (let i = 1; i < lower.length; i++) {
+            if (lower[i] === ' ' && lower[i + 1] !== ' ') {
+                arrTxt.push(lower[i + 1].toUpperCase());
+            } else if (lower[i] !== ' ' && lower[i - 1] === ' ') {
+                arrTxt.splice(i, 1);
+                arrTxt.splice(i - 1, 0, ' ');
+            } else {
+                arrTxt.push(lower[i]);
+            }
+        }
+        document.write(arrTxt.join(""));
+    }
+
+    document.write('Xâu kí tự sau khi chuẩn hoá: ')
+    normalize(stringX + '<br>');
+
+    function findLongestWord(str) {
+        let words = str.split(' ');
+        let maxLength = 0;
+        let index = 0;
+        for (let i = 0; i < words.length; i++) {
+            if (words[i].length > maxLength) {
+                maxLength = words[i].length;
+                index = i;
+            }
+        }
+        document.write('Kí tự dài nhất là: ' + words[index] + ' có ');
+        return maxLength;
+    }
+
+    let result = findLongestWord(stringX);
+    document.write(result + ' Kí tự ');
+
+</script>
+</body>
+</html>

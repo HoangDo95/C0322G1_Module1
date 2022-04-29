@@ -1,0 +1,44 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+}
+
+table {
+    border: 1px royalblue solid;
+    border-spacing: unset;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+    clear: right;
+}
+
+td {
+    width: 25%;
+}
+
+th {
+    width: 20%;
+    background-color: royalblue;
+    color: white;
+}
+
+tr:hover {
+    background-color: gray;
+    color: white;
+}
+
+div {
+    width: 50%;
+    margin: 0 auto 4%;
+}
+
+#add {
+    float: right;
+    background-color: lightgreen;
+    width: auto !important;
+}
+
+button {
+    border-radius: 10px;
+    width: 50%;
+}
+

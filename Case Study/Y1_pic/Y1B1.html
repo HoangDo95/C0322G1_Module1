@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.-->
+    <!--    Ví dụ: x = 4, y = 5-->
+</head>
+<body>
+
+<script>
+    let width= parseInt(prompt("Nhập chiều rộng HCN"));
+    let length = parseInt(prompt("nhập chiều dài HCN"));
+    for (let i=1;i<=width;i++) {
+        for (let j=1;j<=length;j++){
+            if (i===1 || i===width || j===1 || j===length){
+                document.write("*");
+            }else {
+                document.write("&nbsp&nbsp")
+            }
+
+        }document.write("<br>")
+    }
+</script>
+</body>
+</html>

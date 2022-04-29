@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.-->
+</head>
+<body>
+<script>
+    let n = parseInt(prompt(" Nhập sô hàng"));
+    let m = parseInt(prompt(" Nhập sô cột"));
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = []
+        document.write("[")
+        for (let j = 0; j < m; j++) {
+            a[i][j] = parseInt(prompt(" Nhập chuỗi"))
+            document.write(a[i][j] + ' ')
+        }
+        document.write("]" + "<br>")
+    }
+
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            let flag = true;
+            if (a[i][j] <= 1) {
+                flag = false
+            }
+            for (let k = 2; k < a[i][j]; k++) {
+                if (a[i][j] % k === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag === true) {
+                document.write(a[i][j] + " là snt " + "<br>")
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

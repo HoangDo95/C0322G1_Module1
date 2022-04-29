@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo.css">
+
+
+</head>
+<body>
+<h1 align="center">Danh sach xe</h1>
+<div>
+    <button id="add" onclick="create()">Create new car</button>
+</div>
+<p id="display"></p>
+
+
+</body>
+<script>
+
+    // Lớp xe : có thuộc tính tên, màu sắc, hãng xe.
+    class Car {
+        constructor(name, color, producer) {
+            this._name = name;
+            this._color = color;
+            this._producer = producer;
+        }
+
+        getName() {
+            return this._name;
+        }
+
+        setName(value) {
+            this._name = value;
+        }
+
+        getColor() {
+            return this._color;
+        }
+
+        setColor(value) {
+            this._color = value;
+        }
+
+        getProducer() {
+            return this._producer;
+        }
+
+        setProducer(value) {
+            this._producer = value;
+        }
+    }
+
+    let arrCar = [];
+
+    function display(arr) {
+        let sout = "<table border='1px'>\n" +
+            "    <tr>" +
+            "        <th>STT</th>" +
+            "        <th>Name</th>\n" +
+            "        <th>Color</th>\n" +
+            "        <th>Producer</th>" +
+            "        <th>Action</th>" +
+            "    </tr>";
+        for (let i = 0; i < arr.length; i++) {
+            sout += "<tr>" +
+                "<td>" + (i + 1) + "</td>" +
+                "<td>" + arr[i].getName() + "</td>" +
+                "<td>" + arr[i].getColor() + "</td>" +
+                "<td>" + arr[i].getProducer() + "</td>" +
+                "<td>" +
+                "<button onclick='edit(" + i + ")'>Update</button>" +
+                "<button onclick='remove(" + i + ")'>Delete</button>" +
+                "</td>" +
+                "</tr>"
+        }
+        sout += "</table>";
+        document.getElementById("display").innerHTML = sout;
+    }
+
+    display(arrCar);
+
+    // tạo mới đối tượng.
+    function create() {
+        let name = prompt("Nhập tên xe: ");
+        let color = prompt("Nhập màu xe: ");
+        let producer = prompt("Nhập hãng xe: ");
+        let newCar = new Car(name, color, producer);
+        arrCar.push(newCar);
+        display(arrCar);
+        alert("Thêm mới thành công.");
+    }
+
+    // sửa thông tin đối tượng.
+    function edit(i) {
+        let name = prompt("Nhập tên xe: ");
+        let color = prompt("Nhập màu xe: ");
+        let producer = prompt("Nhập hãng xe: ");
+        arrCar[i] = new Car(name, color, producer);
+        alert("Sửa thông tin đối tượng thành công");
+        display(arrCar);
+    }
+
+    //xóa đối tượng.
+    function remove(kha) {
+        let name = arrCar[kha].getName();
+        let choose = confirm("Bạn có chắc chắn xóa: " + name);
+        if (choose) {
+            arrCar.splice(kha, 1);
+            alert("xóa thành công");
+        } else {
+            alert("lựa chọn cẩn thận");
+        }
+        display(arrCar);
+    }
+</script>
+</html>

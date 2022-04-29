@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangTong = [];
+    let giaMonDaGoi;
+    let soLuong;
+    let tongTien;
+    do {
+        tongTien = 0;
+        let chon = parseInt(prompt("1 cafe \n2 cam vắt \n3 Nước ép cà rốt \n4 Nước ép cà chua \n" +
+            "5 Nước lọc \n6 Nước dừa \n7 thoát"));
+        if (chon === 1) {
+            do {
+                soLuong = parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 30k "));
+                if (soLuong >= 0) {
+                    break;
+                } else {
+                    alert("Nhập sai cú pháp ");
+                }
+            } while (true);
+            giaMonDaGoi = soLuong * 30000;
+            mangTong.push(giaMonDaGoi);
+            tinhTien();
+            alert("giá món vừa gọi: " + giaMonDaGoi + "  Tổng tiền cần trả: " + tongTien);
+        } else if (chon === 2) {
+            do {
+                soLuong = parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 28k "));
+                if (soLuong >= 0) {
+                    break;
+                } else {
+                    alert("Nhập sai cú pháp");
+                }
+            } while (true);
+            giaMonDaGoi = soLuong * 28000;
+            mangTong.push(giaMonDaGoi);
+            tinhTien();
+            alert("giá món vừa gọi: " + giaMonDaGoi + "  Tổng tiền cần trả: " + tongTien);
+        } else if (chon === 3) {
+            do {
+                soLuong = parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 25k "));
+                if (soLuong >= 0) {
+                    break;
+                } else {
+                    alert("Nhập sai cú pháp");
+                }
+            } while (true);
+            giaMonDaGoi = soLuong * 25000;
+            mangTong.push(giaMonDaGoi);
+            tinhTien();
+            alert("giá món vừa gọi: " + giaMonDaGoi + "  Tổng tiền cần trả: " + tongTien);
+        } else if (chon === 4) {
+            do {
+                soLuong = parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 32k "));
+                if (soLuong >= 0) {
+                    break;
+                } else {
+                    alert("Nhập sai cú pháp");
+                }
+            } while (true);
+            giaMonDaGoi = soLuong * 32000;
+            mangTong.push(giaMonDaGoi);
+            tinhTien();
+            alert("giá món vừa gọi: " + giaMonDaGoi + "  Tổng tiền cần trả: " + tongTien);
+        } else if (chon === 5) {
+            do {
+                soLuong = parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 39k "));
+                if (soLuong >= 0) {
+                    break;
+                } else {
+                    alert("Nhập sai cú pháp");
+                }
+            } while (true);
+            giaMonDaGoi = soLuong * 39000;
+            mangTong.push(giaMonDaGoi);
+            tinhTien();
+            alert("giá món vừa gọi: " + giaMonDaGoi + "  Tổng tiền cần trả: " + tongTien);
+        } else if (chon === 6) {
+            do {
+                soLuong = parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 35k "));
+                if (soLuong >= 0) {
+                    break;
+                } else {
+                    alert("Nhập sai cú pháp");
+                }
+            } while (true);
+            sum = soLuong * 35000;
+            mangTong.push(sum);
+            tinhTien();
+            alert("giá món vừa gọi: " + sum + "  Tổng tiền cần trả: " + tongTien);
+        } else if (chon === 7) {
+            tinhTien();
+            alert("Tổng số tiền các món cần thanh toán: " + tongTien);
+            break;
+        } else {
+            alert("Hiện tại ko có trường trình này vui lòng chọn lại....")
+        }
+    } while (true);
+    function tinhTien() {
+        for (let i = 0; i < mangTong.length; i++) {
+            tongTien = tongTien + mangTong[i]
+        }
+    }
+</script>
+</body>
+</html>

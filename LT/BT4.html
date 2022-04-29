@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết chương trình nhập vào 1 mảng các số nguyên.-->
+<!--    Đếm số lần xuất hiện của các phần tử trong mảng đó. Ví dụ:-->
+<!--    [ 1,2,3,3,2,4] => 1 : 1 lần , 2 : 2 lần, 3: 2 lần, 4: 1 lần.-->
+
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 2, 3, 4, 2];
+    let count = 1;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = i+1; j <a.length; j++) {
+            if(a[i]===a[j]){
+                count++
+                a.splice(j,1);
+                j--
+            }
+        }document.write(a[i]+':'+ count+'<br>');
+        count=1;
+    }
+    // document.write(count)
+</script>
+</body>
+</html>

@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> Nhập và điều chỉnh nhiệt dộ</title>
 </head>
 <body>
-$END$
+<script>
+    do {
+        let temperature;
+        do {
+            temperature = prompt('Input temperature ');
+            if (!isNaN(temperature) && Number.isInteger(parseFloat(temperature))) {
+                temperature = parseInt(temperature);
+                break;
+            }
+        } while (true)
+        if (temperature < 20) {
+            alert("Tăng nhiệt độ");
+        } else if (temperature > 100) {
+            alert("Giảm nhiệt độ");
+        } else {
+            alert("chuẩn ko chỉnh");
+            break;
+        }
+    } while (true);
+</script>
 </body>
 </html>

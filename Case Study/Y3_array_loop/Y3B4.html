@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+ Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
+</head>
+<body>
+<script>
+    let a = ['0','1','2','3','4','5','6','7','8','9'];
+    let b = ["không","một","hai",'ba','bốn','năm','sáu','bảy','tám','chín'];
+    let c = prompt("Nhập số");
+    let kq = "";
+    for (let i = 0; i < c.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (c[i] === a[j]) {
+                kq = kq + b[j] + ' ';
+            }
+        }
+    }
+    document.write(kq)
+
+</script>
+</body>
+</html>

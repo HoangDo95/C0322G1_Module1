@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết chương trình nhập vào 1 mảng số nguyên.-->
+<!--    Nếu 2 phần tử liền nhau trong mảng có tổng = 20 thì thay thế vị trí của 2 phần tử đó = tổng của nó. -->
+<!--    Ví dụ [ 1, 7, 13 , 6] => [1, 20, 20 ,6].-->
+</head>
+<body>
+<script>
+    let a = [];
+    for(let i =0;i<a.length;i++){
+
+        if( a[i]+a[i+1] === 20){
+            a[i]=20
+            a[i+1]=20
+        }
+    }document.write(a)
+</script>
+</body>
+</html>

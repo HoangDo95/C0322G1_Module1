@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <button type="button" onclick="drinksBasic('1')">1</button>
+        </td>
+        <td>
+            <button type="button" onclick="drinksBasic('2')">2</button>
+        </td>
+        <td>
+            <button type="button" onclick="drinksBasic('3')">3</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="drinksBasic('4')">4</button>
+        </td>
+        <td>
+            <button type="button" onclick="drinksBasic('5')">5</button>
+        </td>
+        <td>
+            <button type="button" onclick="drinksBasic('6')">6</button>
+        </td>
+        <td>
+            <button type="button" onclick="drinksBasic('7')">7</button>
+        </td>
+    </tr>
+</table>
+<ol>
+    <li>cafe</li>
+    <li>cam vắt</li>
+    <li>nước ép cà rốt</li>
+    <li>nước ép cà chua</li>
+    <li>nước lọc</li>
+    <li>nước dừa</li>
+    <li>thoát gọi món</li>
+</ol>
+<script>
+    let arrSum = [];
+
+    function drinksBasic(x) {
+        let result;
+        let sumDink = payment(arrSum);
+        do {
+            switch (x) {
+                case '1':
+                    result = 15000 * parseInt(prompt('Giá cafe: 15000đ, hãy nhập số lượng muốn mua: '));
+                    alert("Tổng số tiền bạn phải trả là: " + result)
+                    arrSum.push(result);
+                    break;
+                case '2':
+                    result = 25000 * parseInt(prompt('Giá cam vắt: 25000đ, hãy nhập số lượng muốn mua: '));
+                    alert("Tổng số tiền bạn phải trả là: " + result)
+                    arrSum.push(result);
+                    break;
+                case '3':
+                    result = 35000 * parseInt(prompt('Giá nước ép cà rốt: 35000đ, hãy nhập số lượng muốn mua: '));
+                    alert("Tổng số tiền bạn phải trả là: " + result)
+                    arrSum.push(result);
+                    break;
+                case '4':
+                    result = 35000 * parseInt(prompt('Giá nước ép cà chua: 35000đ, hãy nhập số lượng muốn mua: '));
+                    alert("Tổng số tiền bạn phải trả là: " + result)
+                    arrSum.push(result);
+                    break;
+                case '5':
+                    result = 10000 * parseInt(prompt('Giá nước lọc: 10000đ, hãy nhập số lượng muốn mua: '));
+                    alert("Tổng số tiền bạn phải trả là: " + result)
+                    arrSum.push(result);
+                    break;
+                case '6':
+                    result = 20000 * parseInt(prompt('Giá nước dừa: 20000đ, hãy nhập số lượng muốn mua: '));
+                    alert("Tổng số tiền bạn phải trả là: " + result)
+                    arrSum.push(result);
+                    break;
+                case '7':
+                    alert("Bạn đã thoát chương trình " + '\n' + 'Tổng số tiền của bạn là: ' + sumDink );
+                    break;
+            }
+        } while (x === '7');
+
+        function payment(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum = sum + arr[i];
+            }
+            return sum;
+        }
+    }
+
+    // Bài 5: Giả sử menu của chúng ta có các loại thức uống như sau:
+    //         Cafe
+    // Cam vắt
+    // Nước ép cà rốt
+    // Nước ép cà chua
+    // Nước lọc
+    // Nước dừa
+    // Viết một chương trình gọi thức uống đơn giản.
+    //         Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa
+    // Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)
+    // Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng.
+    // Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.
+    //         Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, kết thúc quá trình đặt thức uống khi người nhấn số 7
+
+</script>
+</body>
+</html>

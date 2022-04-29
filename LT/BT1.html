@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1. Nhập 1 chuỗi bất kì. Hãy tìm số từ và số kí tự chữ có trong chuỗi. Ví dụ: Nguyen Van a => 3 từ và 10 kí tự.
+    let a = prompt("nhập đại đi")//NGuyen van a
+    let count = 0;
+    let count1 =1;
+    for (let i = 0; i < a.length; i++) {
+        if (isNaN(a[i])) {
+            count++;
+        }
+    }
+    document.write("Chuỗi :" + a + "<br>" + ' có số kí tự chữ là ' + count + ' <br>');// sô kí tự chữ có trong chuỗi
+
+    for (let j = 0; j < a.length; j++) {
+        if (a[j] !== ' ' && a[j + 1] === ' ') {
+            count1++;
+        }
+    }
+    document.write('số từ có trong chuỗi là: ' + count1);// số từ có trong chuỗi
+</script>
+</body>
+</html>

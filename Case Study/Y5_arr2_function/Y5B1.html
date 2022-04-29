@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
+ Với m, n là các   số nhập từ bàn phím.-->
+</head>
+<body>
+<script>
+    let n = parseInt(prompt(" Nhập sô hàng"));
+    let m = parseInt(prompt(" Nhập sô cột"));
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = []
+        document.write("[")
+        for (let j = 0; j < m; j++) {
+            a[i][j] = parseInt(prompt(" Nhập chuỗi"))
+            document.write(a[i][j] + ' ')
+        }
+        document.write("]"+"<br>")
+    }
+    let sum =0;
+    for(let i =0;i <a.length;i++){
+        for(let j = 0;j < a[i].length;j++){
+            if(a[i][j]%2===0){
+                sum= sum +a[i][j]
+            }
+        }
+    }document.write(sum)
+</script>
+</body>
+</html>
